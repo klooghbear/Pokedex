@@ -4,16 +4,16 @@ const connection = require('knex')(config)
 
 module.exports = {
   getTrainers,
-  getgetpokemon,
+  getpokemon,
 }
 
 function getTrainers(db = connection) {
  return db('trainers')
- .select('name')
+ .select()
 }
-function getgetpokemon(db = connection) {
+function getpokemon(db = connection) {
   return db('pokemon')
-  .select('name')
+  .select()
 }
 
 function getTrainersAndPokemon(db = connection) {

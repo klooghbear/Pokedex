@@ -4,4 +4,6 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/')
+router.get('/pokemon/:id', (req, res) => {
+    db.
+})
