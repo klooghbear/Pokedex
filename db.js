@@ -7,8 +7,9 @@ module.exports = {
   getpokemon,
 }
 
-function getTrainers(db = connection) {
+function getTrainers(name, db = connection) {
  return db('trainers')
+ .where('trainers.id', name)
  .select()
 }
 function getpokemon(db = connection) {
