@@ -39,4 +39,13 @@ function getTrainersById(name, db = connection) {
   .select('name')
 }
 
-//pokemon-trainers.trainer_id', 'trainers.name', 'trainers.gym', 'trainers.town', 'trainers.url
+// server.get('/test/:id', (req, res) => { 
+//   db.getTrainersAndPokemon(req.params.id)
+//   .then( trained => {
+//       db.getTrainersById(req.params.id)
+//       .then(trainers => {
+//           console.log(trainers)
+//           res.send(trained)
+//       })
+//   })
+// })
