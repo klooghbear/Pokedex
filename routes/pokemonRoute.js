@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/pokemon/:id', (req, res) => {
 
-    db.getpokemon(req.params.id)
+    db.getPokemonById(req.params.id)
         .then (pokemon => {
             console.log(pokemon)
             res.render('pokemonView', {pokemon:pokemon})
