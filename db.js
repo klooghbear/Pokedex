@@ -8,8 +8,10 @@ module.exports = {
 }
 
 function getTrainers(db = connection) {
-
+ return db('trainers')
+ .select('name')
 }
 function getgetpokemon(db = connection) {
-
+  return db('pokemon')
+  .select('name')
 }

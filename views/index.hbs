@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
   </head>
   <body>
+    
     <div class="container">
-      <div class="trainerSelection">
-          <form action="/" method="post">
-          <label>Select your trainer</label>
-          <select name="trainer" >
-            {{#each}}
-              <option value="{{}}">{{}}</option>
-            {{/each}}
-          </select>
-          <input type="submit" value="Submit">  
-          </form>
-      </div>
-      <div class="trainerSelection">
-          <form action="/" method="post">
-          <label>Select your Pokemon</label>
-          <select name="pokemon" >
-            {{#each}}
-              <option value="{{}}">{{}}</option>
-            {{/each}}
-          </select>
-          <input type="submit" value="Submit">  
-          </form>
-      </div>
+          <img class="headerimage" src="/images/pokemon.jpg" width="80%">   
+     <div class="flexBox">
+      <div class="Selection">
+            <form action="/" method="post">
+            <label>Select your trainer</label>
+            <select name="trainer" >
+              {{!-- {{#each}}
+                <option value="{{}}">{{}}</option>
+              {{/each}} --}}
+            </select>
+            <input type="submit" value="Submit">  
+            </form>
+        </div>
+        <div class="Selection">
+            <form action="/" method="post">
+            <label>Select your Pokemon</label>
+            <select name="pokemon" >
+              {{!-- {{#each}}
+                <option value="{{}}">{{}}</option>
+              {{/each}} --}}
+            </select>
+            <input type="submit" value="Submit">  
+            </form>
+        </div>
+    </div>
   </body>
 </html>
