@@ -15,3 +15,7 @@ function getgetpokemon(db = connection) {
   return db('pokemon')
   .select('name')
 }
+
+function getTrainersAndPokemon(db = connection) {
+  
+}
