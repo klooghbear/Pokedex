@@ -5,18 +5,39 @@ const connection = require('knex')(config)
 module.exports = {
   getTrainers,
   getpokemon,
+  getTrainersAndPokemon,
+  getTrainersById,
+  getPokemonById
 }
 
-function getTrainers(name, db = connection) {
+function getTrainers(db = connection) {
  return db('trainers')
- .where('trainers.id', name)
- .select()
+ .select('name')
 }
+
 function getpokemon(db = connection) {
   return db('pokemon')
-  .select()
+  .select('name')
 }
 
-function getTrainersAndPokemon(db = connection) {
-  
+function getTrainersAndPokemon(id, db = connection) {
+  return db('pokemon-trainers')
+  .join('trainers', 'trainers.id', '=', 'trainer_id')
+  .join('pokemon', 'pokemon.id', '=', 'pokemon_id')
+  .where('pokemon-trainers.trainer_id', '=', id)
+  .select('pokemon.name', 'pokemon.type')
 }
+
+function getTrainersById(name, db = connection) {
+  return db('trainers')
+  .where('trainers.id', '=', name)
+  .select('*')
+  .first()
+ }
+
+ function getPokemonById(name, db = connection) {
+  return db('pokemon')
+  .where('pokemon.id', '=', name)
+  .select('name')
+}
+

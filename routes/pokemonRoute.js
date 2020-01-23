@@ -5,5 +5,13 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/pokemon/:id', (req, res) => {
-    db.
+
+    db.getpokemon(req.params.id)
+        .then (pokemon => {
+            console.log(pokemon)
+            res.render('pokemonView', {pokemon:pokemon})
+        })
+    
 })
+
+module.exports = router
