@@ -2,6 +2,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 
 const userRoutes = require('./routes/users')
+const pokemonRoutes = require('./routes/pokemonRoute')
 
 const server = express()
 
@@ -15,6 +16,7 @@ server.use(express.static('public'))
 // Routes
 
 server.use('/', userRoutes)
+server.use('/', pokemonRoutes)
 
 server.get('/test', (req, res) => {
     res.send('hello.')
