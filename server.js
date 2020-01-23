@@ -16,4 +16,8 @@ server.use(express.static('public'))
 
 server.use('/', userRoutes)
 
+server.get('/test', (req, res) => {
+    res.send('hello.')
+})
+
 module.exports = server
