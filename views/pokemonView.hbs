@@ -1,9 +1,15 @@
-<div>
+<div class="container">
     {{#each pokemon}}
-    <p>{{name}}</p>
+
+    <div class="flexBox">
+        <img class="headerimage" src="/images/pokedex.png" width="80%">
+        <h2>{{name}}</h2>
+        <img class="headerimage" src="{{url}}" alt="image">
+    </div>
+
     <p>{{type}}</p>
-    <img src="{{url}}" alt="image">
-    <p>{{blurb}}</p>
+    
+    <p>"{{blurb}}"</p>
     <p>{{ability}}</p>
     {{/each}}
 </div>
