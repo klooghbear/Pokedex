@@ -16,7 +16,7 @@
             <label>Select your trainer</label>
             <select name="trainer" >
               {{#each trainers}}
-                <option value="{{name}}">{{name}}</option>
+                <option value="{{id}}">{{name}}</option>
               {{/each}}
             <option selected="selected">None</option>
             </select>
@@ -27,7 +27,7 @@
             <label>Select your Pokemon</label>
             <select name="pokemon" >
               {{#each pokemon}}
-                <option value="{{name}}">{{name}}</option>
+                <option value="{{id}}">{{name}}</option>
               {{/each}}
               <option selected="selected">None</option>
             </select>
