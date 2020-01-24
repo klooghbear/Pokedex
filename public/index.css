@@ -76,3 +76,11 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+.trained{
+    color: #f5d000;
+}
+
+.type {
+    font-size: 25px;
+}
