@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pokedex</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+<body>
 
-  </head>
-  <body>
-    
-    <div class="container">
-          <img class="headerimage" src="/images/pokemon.jpg" width="80%">   
-     <div class="flexBox">
+  <div class="container">
+    <div class="flexBox">
+      <img class="headerimage" src="/images/pokedex.png" width="80%">
       <div class="Selection">
-            <form action="/" method="post">
-            <label>Select your trainer</label>
-            <select name="trainer" >
-              {{!-- {{#each}}
-                <option value="{{}}">{{}}</option>
-              {{/each}} --}}
-            </select>
-            <input type="submit" value="Submit">  
-            </form>
-        </div>
-        <div class="Selection">
-            <form action="/" method="post">
-            <label>Select your Pokemon</label>
-            <select name="pokemon" >
-              {{!-- {{#each}}
-                <option value="{{}}">{{}}</option>
-              {{/each}} --}}
-            </select>
-            <input type="submit" value="Submit">  
-            </form>
-        </div>
+        <form action="/" method="post">
+          <label>Select your trainer</label>
+          <select name="trainer">
+            {{#each trainers}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+            <option selected="selected">None</option>
+          </select>
+          <input type="submit" value="Submit">
+      </div>
+      <div class="Selection">
+        <form action="/" method="post">
+          <label>Select your Pokemon</label>
+          <select name="pokemon">
+            {{#each pokemon}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+            <option selected="selected">None</option>
+          </select>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
     </div>
-  </body>
+  </div>
+  <div class="display">
+    <div class="button"></div>
+    <div class="button-cross"></div>
+  </div>
+
+</body>
+
 </html>

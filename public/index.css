@@ -1,10 +1,24 @@
 .headerimage{
-    width: 90%;
+    width: 45%;
     margin:0 auto;
 }
 .container{
+    color: cornsilk;
     width: 80%;
     margin: 0 auto;
+    border: 10px solid #59554c;
+    padding: 20px;
+    max-width:1000px;
+    width: 70%;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 800;
+    background-color: rgb(52, 146, 235);
+    box-shadow: inset 1px 1px 15px 1px blue;
+    border-radius: 25px;
+    min-height: 300px;
+    
 }
 .flexBox{
     display: flex;
@@ -13,6 +27,52 @@
     flex-direction: column;
 }
 .Selection{
-width: max-content;
-height: 50px;
+    width: max-content;
+    height: 50px;
+}
+
+body{
+    background-color: red;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 40px;
+}
+
+.big-margin{
+    border: 20px solid #ccc;
+    background: lightBlue;
+    margin: 20px;
+}
+
+.button{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(44, 44, 44);
+    margin: 50px auto;
+    margin-left: 30%;
+    margin-right: auto;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px rgb(39, 39, 39),
+                inset 1px 1px 15px 1px rgb(58, 58, 58),
+                inset 5px 3px 15px 1px rgb(78, 78, 78);
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button-cross{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(44, 44, 44);
+    margin: 50px auto;
+    margin-left: auto;
+    margin-right: 30%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px rgb(39, 39, 39),
+                inset 1px 1px 15px 1px rgb(58, 58, 58),
+                inset 5px 3px 15px 1px rgb(78, 78, 78);
+}
+
+.display{
+    display: flex;
+    flex-direction: row;
 }
