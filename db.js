@@ -12,12 +12,12 @@ module.exports = {
 
 function getTrainers(db = connection) {
  return db('trainers')
- .select('name')
+ .select()
 }
 
 function getpokemon(db = connection) {
   return db('pokemon')
-  .select('name')
+  .select()
 }
 
 function getTrainersAndPokemon(id, db = connection) {
@@ -30,14 +30,12 @@ function getTrainersAndPokemon(id, db = connection) {
 
 function getTrainersById(name, db = connection) {
   return db('trainers')
-  .where('trainers.id', '=', name)
+  .where('trainers.name', '=', name)
   .select('*')
-  .first()
  }
 
  function getPokemonById(name, db = connection) {
   return db('pokemon')
   .where('pokemon.id', '=', name)
-  .select('name')
+  .select('*')
 }
-

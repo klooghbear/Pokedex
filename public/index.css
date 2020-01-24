@@ -16,6 +16,7 @@
     background-color: rgb(52, 146, 235);
     box-shadow: inset 1px 1px 15px 1px blue;
     border-radius: 25px;
+    min-height: 300px;
     
 }
 .flexBox{
@@ -37,4 +38,10 @@ body{
     border: 20px solid #ccc;
     background: lightBlue;
     margin: 20px;
+}
+
+.button-circle{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
 }

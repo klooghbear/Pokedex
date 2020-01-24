@@ -18,7 +18,9 @@ router.get('/trainers/:id', (req, res) => {
 })
 
 
-
+router.post('/banana', (req, res) => {
+  res.redirect('/trainers/' + req.body.trainer)
+})
 
 
 module.exports = router
