@@ -8,7 +8,6 @@ router.get('/pokemon/:id', (req, res) => {
 
     db.getPokemonById(req.params.id)
         .then (pokemon => {
-            console.log(pokemon)
             res.render('pokemonView', {pokemon:pokemon})
         })
     
