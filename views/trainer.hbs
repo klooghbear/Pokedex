@@ -1,12 +1,15 @@
-<h1>Trainers</h1>
 
-<h1>{{trainers.name}}</h1>
-{{#each trained}}
+<div class="container">
 
-<section>
-  <h2>{{name}}</h2>
+  {{#each trainers}}
   
-  <h2>{{type}}</h2>
-</section>
-
-{{/each}}
+  <div class="flexBox">
+    <img class="headerimage" src="/images/pokedex.png" width="80%">
+    <h2>{{name}}</h2>
+    <img class="headerimage" src="{{url}}" alt="image">
+  </div>
+  <p>{{gym}}</p>
+  <p>"{{town}}"</p>
+  
+  {{/each}}
+</div> 

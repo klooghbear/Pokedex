@@ -6,12 +6,12 @@ const router = express.Router()
 
 
 
-router.get('/trainers/:id', (req, res) => {
+router.get('/trainer/:id', (req, res) => {
   db.getTrainersAndPokemon(req.params.id)
   .then(trained => {
     db.getTrainersById(req.params.id)
     .then(trainers => {
-  
+    console.log(trainers)
       res.render('trainer', {trained: trained, trainers: trainers})
     })
   })
