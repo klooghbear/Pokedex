@@ -3,6 +3,7 @@ const hbs = require('express-handlebars')
 const userRoutes = require('./routes/users')
 const trainerRoute = require('./routes/trainerRoute')
 const pokemonRoutes = require('./routes/pokemonRoute')
+const addPokeRoutes = require('./routes/addPokeRouter')
 
 const db = require('./db')
 const server = express()
@@ -22,6 +23,7 @@ server.use(express.static('public'))
 
 server.use('/', userRoutes)
 server.use('/', pokemonRoutes)
+server.use('/', addPokeRoutes)
 
 server.get('/test/:id', (req, res) => { 
     db.getTrainersAndPokemon(req.params.id)
