@@ -39,3 +39,7 @@ function getTrainersById(name, db = connection) {
   .where('pokemon.id', '=', name)
   .select('*')
 }
+
+function addNewPokemon(nName, nType, nUrl, nBlurb, nAbility, nTrainer, db = connection) {
+  console.log("Howdy.")
+}
