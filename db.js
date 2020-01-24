@@ -7,7 +7,10 @@ module.exports = {
   getpokemon,
   getTrainersAndPokemon,
   getTrainersById,
-  getPokemonById
+  getPokemonById,
+  addNewPokemon,
+  addNewPokeJoin,
+  test
 }
 
 function getTrainers(db = connection) {
@@ -30,7 +33,7 @@ function getTrainersAndPokemon(id, db = connection) {
 
 function getTrainersById(name, db = connection) {
   return db('trainers')
-  .where('trainers.name', '=', name)
+  .where('trainers.id', '=', name)
   .select('*')
  }
 
@@ -38,4 +41,28 @@ function getTrainersById(name, db = connection) {
   return db('pokemon')
   .where('pokemon.id', '=', name)
   .select('*')
+}
+
+function addNewPokemon(nName, nType, nUrl, nBlurb, nAbility, nTrainer, db = connection) {
+  return db('pokemon')
+  .insert({
+    name: nName,
+    type: nType,
+    url: nUrl,
+    blurb: nBlurb,
+    ability: nAbility
+  })  
+}
+
+function test() {
+  console.log("heyyyy")
+}
+
+
+function addNewPokeJoin(trainerId, pokeId, db = connection) {
+  return db('pokemon-trainers')
+  .insert({
+    trainer_id: trainerId,
+    pokemon_id: pokeId
+  }) 
 }
