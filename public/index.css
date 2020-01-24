@@ -43,37 +43,36 @@ body{
     margin: 20px;
 }
 
-.button-circle{
-    width: 300px;
-    height: 300px;
+.button{
+    width: 200px;
+    height: 200px;
     background-color: rgb(44, 44, 44);
     margin: 50px auto;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-right: auto;
     border-radius: 50%;
     box-shadow: 10px 10px 15px rgb(39, 39, 39),
                 inset 1px 1px 15px 1px rgb(58, 58, 58),
                 inset 5px 3px 15px 1px rgb(78, 78, 78);
+    display: flex;
+    flex-direction: row;
 
 }
 
-circle
-
-.cross {
-    background: rgb(255, 255, 255);
-    height: 100px;
-    position: relative;
-    margin-right: 25%;
+.button-cross{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(44, 44, 44);
+    margin: 50px auto;
     margin-left: auto;
-    width: 20px;
-  }
-  .cross:after {
-    background: rgb(0, 0, 0);
-    content: "";
-    height: 20px;
-    left: -40px;
-    position: absolute;
+    margin-right: 30%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px rgb(39, 39, 39),
+                inset 1px 1px 15px 1px rgb(58, 58, 58),
+                inset 5px 3px 15px 1px rgb(78, 78, 78);
+}
 
-    top: 40px;
-    width: 100px;
-  }
+.display{
+    display: flex;
+    flex-direction: row;
+}
