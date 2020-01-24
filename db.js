@@ -7,7 +7,10 @@ module.exports = {
   getpokemon,
   getTrainersAndPokemon,
   getTrainersById,
-  getPokemonById
+  getPokemonById,
+  addNewPokemon,
+  addNewPokeJoin,
+  test
 }
 
 function getTrainers(db = connection) {
@@ -41,5 +44,25 @@ function getTrainersById(name, db = connection) {
 }
 
 function addNewPokemon(nName, nType, nUrl, nBlurb, nAbility, nTrainer, db = connection) {
-  console.log("Howdy.")
+  return db('pokemon')
+  .insert({
+    name: nName,
+    type: nType,
+    url: nUrl,
+    blurb: nBlurb,
+    ability: nAbility
+  })  
+}
+
+function test() {
+  console.log("heyyyy")
+}
+
+
+function addNewPokeJoin(trainerId, pokeId, db = connection) {
+  return db('pokemon-trainers')
+  .insert({
+    trainer_id: trainerId,
+    pokemon_id: pokeId
+  }) 
 }
