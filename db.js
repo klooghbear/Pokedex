@@ -30,7 +30,7 @@ function getTrainersAndPokemon(id, db = connection) {
 
 function getTrainersById(name, db = connection) {
   return db('trainers')
-  .where('trainers.name', '=', name)
+  .where('trainers.id', '=', name)
   .select('*')
  }
 
