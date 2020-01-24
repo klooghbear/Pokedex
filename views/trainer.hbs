@@ -1,6 +1,7 @@
 
 <div class="container">
 
+      <a class="home" href="/">Home</a>
   {{#each trainers}}
   
   <div class="flexBox">
@@ -9,7 +10,15 @@
     <img class="headerimage" src="{{url}}" alt="image">
   </div>
   <p>{{gym}}</p>
-  <p>"{{town}}"</p>
+  <p>Home town : {{town}}</p>
   
+  {{/each}}
+  <hr>
+
+<div class="trained">
+  <P>Pokemon Caught :</P>
+  {{#each trained}}
+  <p>{{name}}</p>
+  <p class= "type">Type : {{type}}</p>
   {{/each}}
 </div> 
