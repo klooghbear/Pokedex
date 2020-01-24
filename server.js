@@ -4,6 +4,7 @@ const userRoutes = require('./routes/users')
 const trainerRoute = require('./routes/trainerRoute')
 const pokemonRoutes = require('./routes/pokemonRoute')
 
+const db = require('./db')
 const server = express()
 
 // Middleware
@@ -22,8 +23,15 @@ server.use(express.static('public'))
 server.use('/', userRoutes)
 server.use('/', pokemonRoutes)
 
-server.get('/test', (req, res) => {
-    res.send('hello.')
+server.get('/test/:id', (req, res) => { 
+    db.getTrainersAndPokemon(req.params.id)
+    .then( trained => {
+        db.getTrainersById(req.params.id)
+        .then(trainers => {
+            console.log(trainers)
+            res.send(trained)
+        })
+    })
 })
 
 server.use('/', trainerRoute)
