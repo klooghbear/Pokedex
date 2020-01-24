@@ -3,6 +3,7 @@
     margin:0 auto;
 }
 .container{
+    color: cornsilk;
     width: 80%;
     margin: 0 auto;
     border: 10px solid #59554c;
@@ -16,6 +17,7 @@
     background-color: rgb(52, 146, 235);
     box-shadow: inset 1px 1px 15px 1px blue;
     border-radius: 25px;
+    min-height: 300px;
     
 }
 .flexBox{
@@ -31,6 +33,8 @@
 
 body{
     background-color: red;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 40px;
 }
 
 .big-margin{
@@ -38,3 +42,38 @@ body{
     background: lightBlue;
     margin: 20px;
 }
+
+.button-circle{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(44, 44, 44);
+    margin: 50px auto;
+    margin-left: 25%;
+    margin-right: auto;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px rgb(39, 39, 39),
+                inset 1px 1px 15px 1px rgb(58, 58, 58),
+                inset 5px 3px 15px 1px rgb(78, 78, 78);
+
+}
+
+circle
+
+.cross {
+    background: rgb(255, 255, 255);
+    height: 100px;
+    position: relative;
+    margin-right: 25%;
+    margin-left: auto;
+    width: 20px;
+  }
+  .cross:after {
+    background: rgb(0, 0, 0);
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+
+    top: 40px;
+    width: 100px;
+  }
