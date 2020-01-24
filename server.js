@@ -1,6 +1,5 @@
 const express = require('express')
 const hbs = require('express-handlebars')
-
 const userRoutes = require('./routes/users')
 const trainerRoute = require('./routes/trainerRoute')
 const pokemonRoutes = require('./routes/pokemonRoute')
